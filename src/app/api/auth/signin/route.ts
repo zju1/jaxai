@@ -4,6 +4,8 @@ import { User } from "@/models";
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
 
+export const dynamic = "force-dynamic";
+
 const JWT_SECRET = process.env.JWT_SECRET!;
 
 export async function POST(req: Request) {

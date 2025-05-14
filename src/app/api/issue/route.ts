@@ -2,10 +2,11 @@ import { connectDB } from "@/lib/db";
 import { getSystemContext } from "@/lib/systemContext";
 import { Issue, User } from "@/models";
 import { createOpenRouter } from "@openrouter/ai-sdk-provider";
-import { streamText, smoothStream, generateText, generateObject } from "ai";
+import { generateText } from "ai";
 import { jwtVerify } from "jose";
 import { NextResponse, type NextRequest } from "next/server";
-import { z } from "zod";
+
+export const dynamic = "force-dynamic";
 
 const openrouter = createOpenRouter({
   apiKey:
