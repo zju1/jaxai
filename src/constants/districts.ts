@@ -1,0 +1,18 @@
+export const districts = [
+  "Amiwdárya",
+  "Beruniy",
+  "Bozataw",
+  "Shimbay",
+  "Ellikqala",
+  "Kegeyli",
+  "Moynaq",
+  "Nókis",
+  "Qanlikól",
+  "Qońirat",
+  "Qaraózek",
+  "Shomanay",
+  "Taqiyatas",
+  "Taxtakópir",
+  "Tórtkúl",
+  "Xojeli",
+];
