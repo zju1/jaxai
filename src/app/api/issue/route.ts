@@ -12,7 +12,7 @@ const openrouter = createOpenRouter({
     "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",
 });
 
-export async function POST(req: NextRequest, res: NextResponse) {
+export async function POST(req: NextRequest) {
   await connectDB();
   const body = await req.json();
   const authHeader = req.headers.get("Authorization")?.replace("Bearer ", "");
@@ -56,7 +56,7 @@ export async function POST(req: NextRequest, res: NextResponse) {
   return NextResponse.json({});
 }
 
-export async function GET(req: NextRequest, res: NextResponse) {
+export async function GET(req: NextRequest) {
   await connectDB();
   const authHeader = req.headers.get("Authorization")?.replace("Bearer ", "");
   if (authHeader) {

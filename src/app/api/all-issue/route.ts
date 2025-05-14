@@ -2,7 +2,7 @@ import { connectDB } from "@/lib/db";
 import { Issue } from "@/models";
 import { NextRequest, NextResponse } from "next/server";
 
-export async function GET(req: NextRequest, res: NextResponse) {
+export async function GET(req: NextRequest) {
   await connectDB();
   const authHeader = req.headers.get("Authorization")?.replace("Bearer ", "");
   if (authHeader) {
